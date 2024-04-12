@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="grp ">
+        <h1 class="text-center mb-4">Tax Calculator</h1>
+        <form id="tax-form">
+          <div class="form-group">
+            <label for="gross-income">Gross Annual Income (in Lakhs)</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="gross-income"
+                required
+              />
+              <div class="input-group-append">
+                <div class="input-group-text error-icon d-none">!</div>
+              </div>
+            </div>
+            <div class="error-tooltip d-none">Please enter a valid number.</div>
+          </div>
+          <div class="form-group">
+            <label for="extra-income">Extra Income (in Lakhs)</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="extra-income"
+                required
+              />
+              <div class="input-group-append">
+                <div class="input-group-text error-icon d-none">!</div>
+              </div>
+            </div>
+            <div class="error-tooltip d-none">Please enter a valid number.</div>
+          </div>
+          <div class="form-group">
+            <label for="deductions">Deductions (in Lakhs)</label>
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control"
+                id="deductions"
+                required
+              />
+              <div class="input-group-append">
+                <div class="input-group-text error-icon d-none">!</div>
+              </div>
+            </div>
+            <div class="error-tooltip d-none">Please enter a valid number.</div>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <select class="form-control" id="age" required>
+              <option value="">Select Age</option>
+              <option value="under-40">Under 40</option>
+              <option value="40-60">40 and above, below 60</option>
+              <option value="60-plus">60 and above</option>
+            </select>
+            <div class="error-tooltip d-none">Please select your age.</div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Calculate Tax</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="tax-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="tax-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tax-modal-label">Tax Calculation</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Your calculated tax is: <span id="calculated-tax"></span> Lakhs
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

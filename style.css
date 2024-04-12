@@ -1,0 +1,19 @@
+.error-icon {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.error-tooltip {
+  color: #dc3545;
+  font-size: 0.8rem;
+}
+
+.grp{
+    width: 400px;
+    /* display: flex; */
+    margin-left: 350px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    padding:50px;
+}
